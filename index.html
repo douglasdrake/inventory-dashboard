@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>GHCN Station Inventory</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-custom rounded">
+        <a class="navbar-brand" href="#">GHCN</a>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Global Visualizations</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown09">
+                        <a class="dropdown-item" href="global-density.html">Spatial Density - Temperature</a>
+                        <a class="dropdown-item" href="global-density-prcp.html">Spatial Density - Precipitation</a>
+                        <a class="dropdown-item" href="global-time.html">Evolution of Network over Time</a>
+                        <a class="dropdown-item" href="global-addition.html">Station Addition</a>
+                        <a class="dropdown-item" href="global-dropout.html">Station Dropout</a>
+                        <a class="dropdown-item" href="global-years.html">Years of Data</a>
+                    </div>
+            </li>
+        
+            <li class="nav-item">
+              <a class="nav-link" href="northamerica.html">North America</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sources.html">Sources</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="summary-data.html">Data Summaries</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+
+      <main role="main">
+
+          <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <!-- <div class="jumbotron"> -->
+                    <h2>Summary: GHCN Network of Stations</h2>
+                    <hr class="my-4">
+                      <p>  <img src="static/img/prcp-2018.png" alt="2018 Precipitation Stations" class="img-thumbnail" id="mainpic" align="left">
+                      </p>
+
+                      <p>This project considered data available in the Global Historical Climate Network (GHCN).
+                          As described by <a href="https://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets/global-historical-climatology-network-ghcn">GHCN</a>, the
+                          GHCN is collection of meteorological summaries from land surface stations across the globe.
+                          The summaries are subjected to quality assurance reviews before inclusion into the archive.  
+                          Sources for the archive are varied and described in detail by Menne et. al. (2012).
+                      </p>
+
+                      <p>
+                      Plots were created using Matplotlib, Geoplot (Cartopy), and Seaborn to explore the GHCN station network.
+                      
+                      Factors that were considered were location of stations (continent), type of measurement recorded by the stations, duration of 
+                      measurements by the stations and the evolution of the network over time.  In addition, for the North American stations, 
+                      we consider how the network of stations has changed over time with respect to the type of station.
+                      </p>
+
+                      <p>
+                        The plot above is a choropleth of the density of stations reporting daily precipitation during 2018.
+                      </p>
+
+                      <p>
+                      <cite>Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012:  *An overview 
+                          of the Global Historical Climatology Network-Daily Database*.  Journal of Atmospheric 
+                          and Oceanic Technology, 29, 897-910, doi:10.1175/JTECH-D-11-00103.1.</cite>
+                      </p>
+
+                      <p>
+                          <cite>
+                          Menne, M.J., I. Durre, B. Korzeniewski, S. McNeal, K. Thomas, X. Yin, S. Anthony, R. Ray, 
+                          R.S. Vose, B.E.Gleason, and T.G. Houston, 2012: *Global Historical Climatology Network - 
+                          Daily (GHCN-Daily)*, Version 3.27.
+                          </cite></p>
+
+                  <!-- </div> -->
+                </div>
+            
+              <!--  
+                <div class="col-md-4">
+                    <h3>Visualizations</h3>
+                      <hr class="my-4">
+                        <div class="col-md-6">
+                          <img src="Resources/assets/images/Fig1.png" alt="..." class="img-thumbnail">
+                          <img src="Resources/assets/images/Fig2.png" alt="..." class="img-thumbnail">
+                        </div>
+                        <div class="col-md-6">                      
+                          <img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">                   
+                          <img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail">
+                      </div>
+                        <div class="w-100 d-none d-md-block"></div>
+                      
+                        <div class="col-md-6">                      
+                            <img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">                   
+                            <img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail">
+                        </div>
+                </div>
+              -->
+      
+              <div class="col-md-4">
+                <!-- <div class="jumbotron"> -->
+                  <h3>Visualizations</h3>
+                  <hr class="my-4">
+                  
+                  <div class="row">
+                    <div class="col-md-6 col-sm-3">
+                        <!-- <div class="thumnbail"> -->
+                           <a href="global-density.html"> <img src="static/img/tmax-2018.png" alt="..." class="img-thumbnail"> </a>
+                        <!-- </div> -->
+                    </div>
+                    <div class="col-md-6 col-sm-3">
+                          <!-- <div class="thumbnail"> -->
+                            <a href="global-density-prcp.html"><img src="static/img/prcp-2018.png" alt="..." class="img-thumbnail">
+                          <!-- </div> --></a>
+                        </div>
+                  
+                    <!-- Force next columns to break to new line at md breakpoint and up -->
+                    <div class="w-100 d-none d-md-block"></div>
+                  
+                    <div class="col-md-6 col-sm-3">                      
+                      <!-- <div class="thumbnail"> -->
+                        <a href="global-addition.html"><img src="static/img/prcp_by_firstyear.png" alt="..." class="img-thumbnail">
+                      <!-- </div> --></a>
+                    </div>
+                    <div class="col-md-6 col-sm-3">   
+                        <a href="globabl-dropout.html"><img src="static/img/prcp_by_lastyear.png" alt="..." class="img-thumbnail"></a>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-6 col-sm-3">
+                          <!-- <div class="thumnbail"> -->
+                             <a href="global-time.html"> <img src="static/img/prcp_by_year.png"
+                              alt="..." class="img-thumbnail"> </a>
+                          <!-- </div> -->
+                      </div>
+                      <div class="col-md-6 col-sm-3">
+                            <!-- <div class="thumbnail"> -->
+                              <a href="global-years.html"><img src="static/img/prcp_years.png" alt="..." class="img-thumbnail">
+                            <!-- </div> --></a>
+                          </div>
+
+                  </div>
+                 
+                 
+                <!-- </div> -->
+              </div>
+
+              </div>
+          </div>
+      </main>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  
+
+</body>
+</html>

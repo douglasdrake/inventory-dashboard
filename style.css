@@ -1,0 +1,136 @@
+/* 
+
+For the images, I played around with the max-height, max-width and media queries but
+did not find anything that scaled well.   The thumbnail class seems to work best.
+
+
+*/
+
+/* main {
+  background-color: lightgray;
+}
+*/
+
+h2 {
+  color: teal;
+  margin: 10px;
+}
+
+h3 {
+  color: teal;
+  margin: 10px;
+}
+
+h4 {
+  color: teal;
+  margin: 5px;
+}
+
+img {
+  /*
+    Center a block element in the middle of its enclosing tag.
+    When you use the "auto" rule on both left and right margins,
+    your browser will do the math necessary to center a block element.
+    */
+  margin-left: auto;
+  margin-right: auto;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    margin: 5px;
+  }
+  h3 {
+    margin: 5px;
+  }
+  /* img {
+    margin: 10px;
+  }
+  */
+}
+
+
+@media (max-width:767px) {
+#mainpic {
+  float: none;
+  max-width: auto;
+  max-height: 250px;
+  padding: 10px;
+}
+}
+
+
+.navbar-custom {
+  background-color: whitesmoke;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: teal;
+}
+
+/* change the link color and padding  */
+.navbar-custom .navbar-nav .nav-link {
+  color: black;
+  padding: .75rem 1rem;
+}
+
+/* change the color and bg color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: black;
+  background-color: silver;
+}
+
+/* for dropdown only - change the color of droodown */
+.navbar-custom .dropdown-menu {
+  background-color: silver;
+}
+.navbar-custom .dropdown-item {
+  color: #ffffff;
+}
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+  color: #333333;
+  background-color: rgba(255,255,255,.5);
+}
+
+.custom-toggler.navbar-toggler {
+  color: grey;
+  border-color: white;
+}
+.custom-toggler .navbar-toggler-icon {
+  color: grey;
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(128,128,128, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+@media (max-width:767px) {
+  /* change navbar background */
+  .navbar-custom  {
+    background-color: teal;
+  }
+  /* change navbar-brand color */
+  .navbar a.navbar-brand {
+    color: white;
+  }
+
+  /* change navbar-toggler inside lines color (stroke) */
+  .navbar-custom .navbar-toggler-icon {
+    color: grey;
+  }
+  /* change hamburger button border color */
+  .navbar-custom button.navbar-toggler.navbar-toggler-right {
+    border-color: white;
+  }
+}
+
+@media (min-width:768px) {
+  /* change navbar-brand color */
+  .navbar a.navbar-brand {
+    background-color: teal;
+    color: #fff;
+  }
+  
+}
