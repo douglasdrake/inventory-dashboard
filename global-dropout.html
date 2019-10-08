@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-  <title>Number of Active Stations Per Year</title>
+  <title>Number of Active Stations by Last Year of Record</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -65,15 +65,15 @@
       <div class="row">
         <div class="col-md-8">
           <!-- <div class="jumbotron"> -->
-          <h2>Number of Active Stations By Year</h2>
+          <h2>Number of Active Stations By Last Year of Record</h2>
           <hr class="my-4">
 
           <div class="row">
             <div class="col-md-6">
               <!-- <div class="thumnbail"> -->
               <h4>Daily Precipitation</h4>
-              <a target="_blank" href="static/img/prcp_by_year.png"> <img src="static/img/prcp_by_year.png" alt="..."
-                  class="img-thumbnail"> </a>
+              <a target="_blank" href="static/img/prcp_by_lastyear.png"> <img src="static/img/prcp_by_lastyear.png"
+                  alt="..." class="img-thumbnail"> </a>
               <!-- </div> -->
             </div>
             <div class="col-md-6">
@@ -88,15 +88,15 @@
             <div class="col-md-6">
               <!-- <div class="thumnbail"> -->
               <h4>Daily Minimum Temperature</h4>
-              <a target="_blank" href="static/img/tmin_by_year.png"> <img src="static/img/tmin_by_year.png" alt="..."
-                  class="img-thumbnail"> </a>
+              <a target="_blank" href="static/img/tmin_by_lastyear.png"> <img src="static/img/tmin_by_lastyear.png"
+                  alt="..." class="img-thumbnail"> </a>
               <!-- </div> -->
             </div>
             <div class="col-md-6">
               <!-- <div class="thumbnail"> -->
               <h4>Daily Maximum Temperature</h4>
-              <a target="_blank" href="static/img/tmax_by_year.png"><img src="static/img/tmax_by_year.png" alt="..."
-                  class="img-thumbnail">
+              <a target="_blank" href="static/img/tmax_by_lastyear.png"><img src="static/img/tmax_by_lastyear.png"
+                  alt="..." class="img-thumbnail">
                 <!-- </div> --></a>
             </div>
 
@@ -106,14 +106,14 @@
             <div class="col-md-6">
               <!-- <div class="thumbnail"> -->
               <h4>Daily Snowfall</h4>
-              <a target="_blank" href="static/img/snow_by_year.png"><img src="static/img/snow_by_year.png" alt="..."
-                  class="img-thumbnail">
+              <a target="_blank" href="static/img/snow_by_lastyear.png"><img src="static/img/snow_by_lastyear.png"
+                  alt="..." class="img-thumbnail">
                 <!-- </div> --></a>
             </div>
             <div class="col-md-6">
               <h4>Daily Snow Depth</h4>
-              <a target="_blank" href="static/img/snwd_by_year.png"><img src="static/img/snwd_by_year.png" alt="..."
-                  class="img-thumbnail"></a>
+              <a target="_blank" href="static/img/snwd_by_lastyear.png"><img src="static/img/snwd_by_lastyear.png"
+                  alt="..." class="img-thumbnail"></a>
             </div>
 
           </div>
@@ -122,23 +122,36 @@
             show more detail for the different measurements across the continents.
           </p>
 
-          <p>For each of the measurements, the largest number of stations are in North America.
+          <p>The plots are displaying the number of stations for which the given year is
+            the last year of record.
+          </p>
 
-            We can also see the growth of stations in the
-            archive over time followed by an eventual decline. The timing of the decline
-            varies with the continent. For example, in Asia, there is an abrupt decline in
-            number of precipitation stations in the late 1960s (as discussed in Menne et. al. (2012)). 
-            There is a gradual decline
-            in precipitation stations in the archive for Oceania beginning in the 1970s. In
-            South America there are two sharp declines in the number of daily precipitation stations; 
-            the first, smaller decline occurred in the
-            early 1980s while the larger decline occurred in the late 1990s.</p>
+          <p>
+            The plots for daily minimum and maximum temperature are similar and suggest an
+            increasing trend over time across continents.
+            We see a very sharp increase in stations no longer recording these meteorological variables
+            in North America just after 2010.
+          </p>
 
-          <p>The following plot gives the above five plots with fixed axes.  
-            Menne et. al. (2012) present similar plots in their paper.</p>
+          <p>
+            The plots for daily snowfall and snow depth are similar. We see an increasing trend
+            for stations no longer being included in the archive. The trend for North America
+            increases signigicantly after 2000.
+          </p>
 
-          <p> <a target="_blank" href="static/img/test.png"><img src="static/img/test.png" alt="Element by Continent"
-                class="img-thumbnail" id="visualization"></a>
+          <p>
+            The plot for daily precipitation also suggests an increasing trend over time across continents;
+            however, there are many obvious spikes in the time series.   This is often the result of historical records for daily
+            precipitation not continuing to the present day (Menne et. al. (2012)).  We see large spikes in North America in 
+            1950 and just after 2010.  There is a large spike before 1970 for Asia when a historical collection
+            of precipitation data in India ended.  There are also noticeable spikes for South America and Africa in the early 
+            1980s and 1990s.
+          </p>
+
+          <p>The following plot gives the above five plots with fixed axes.</p>
+
+          <p> <a target="_blank" href="static/img/test_lastyear.png"><img src="static/img/test_lastyear.png"
+                alt="Element by Continent" class="img-thumbnail" id="visualization"></a>
           </p>
 
           <p>

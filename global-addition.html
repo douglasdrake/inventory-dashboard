@@ -1,80 +1,155 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-        <title>Latitude vs Max Temperature</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        
-        <link rel="stylesheet" href="style.css">
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Number of Active Stations by First Year of Record</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-custom rounded">
+      <a class="navbar-brand" href="index.html">GHCN</a>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
+        aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Global Visualizations</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown09">
+              <a class="dropdown-item" href="global-density.html">Spatial Density - Temperature</a>
+              <a class="dropdown-item" href="global-density-prcp.html">Spatial Density - Precipitation</a>
+              <a class="dropdown-item" href="global-time.html">Evolution of Network over Time</a>
+              <a class="dropdown-item" href="global-addition.html">Station Addition</a>
+              <a class="dropdown-item" href="global-dropout.html">Station Dropout</a>
+              <a class="dropdown-item" href="global-years.html">Years of Data</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="northamerica.html">North America</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sources.html">Sources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="summary-data.html">Data Summaries</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
 
     <div class="container">
-        <nav class="navbar navbar-expand-md navbar-custom rounded">
-            <a class="navbar-brand" href="index.html">Latitude</a>
-            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarsExample09">
-            <ul class="navbar-nav ml-auto">
-    
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown09">
-                            <a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
-                            <a class="dropdown-item" href="humidity.html">Humidity</a>
-                            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-                            <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
-                        </div>
-                </li>
-            
-                <li class="nav-item">
-                <a class="nav-link" href="comparison.html">Comparison</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sliced.html">Slicing</a>
-                  </li>
-                <li class="nav-item">
-                <a class="nav-link" href="datatable.html">Data</a>
-                </li>
-                
-            </ul>
-            </div>
-        </nav>
+      <div class="row">
+        <div class="col-md-8">
+          <!-- <div class="jumbotron"> -->
+          <h2>Number of Active Stations By First Year of Record</h2>
+          <hr class="my-4">
 
-
-        <div class="container">
           <div class="row">
-            <div class="col-md-8">
-              <!-- <div class="jumbotron"> -->
-                <h2>Max Temperature</h2>
-                <hr class="my-4">
-                  <p>  <a target="_blank" href="Resources/assets/images/Fig1.png"><img src="Resources/assets/images/Fig1.png" alt="Humidity vs Latitude" class="img-thumbnail" id="visualization"></a>
-                  </p> 
-                    <p>Temperature increases as one approaches the equator (latitude 0). 
-                        There is a large number of cities in the nothern hemisphere that are colder than the 
-                        temperature range seen in the southern hemisphere.
-                      </p>
-
-                      <p>The two areas of highest density in a joint plot of latitiude and temperature
-                        are near latitude 0 with a temperature of 80 degrees and near latitude 50 with
-                        a temperature just below 60 degrees.
-                      </p>
-
-                      <p>  <a target="_blank" href="Resources/assets/images/temp-joint.png"><img src="Resources/assets/images/temp-joint.png" alt="Humidity vs Latitude" class="img-thumbnail" id="visualization"></a>
-                      </p>
-
+            <div class="col-md-6">
+              <!-- <div class="thumnbail"> -->
+              <h4>Daily Precipitation</h4>
+              <a target="_blank" href="static/img/prcp_by_firstyear.png"> <img src="static/img/prcp_by_firstyear.png" alt="..."
+                  class="img-thumbnail"> </a>
               <!-- </div> -->
             </div>
-        
-          <!--  
+            <div class="col-md-6">
+              <!-- <div class="thumbnail"> -->
+              <h4></h4>
+
+            </div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-md-6">
+              <!-- <div class="thumnbail"> -->
+              <h4>Daily Minimum Temperature</h4>
+              <a target="_blank" href="static/img/tmin_by_firstyear.png"> <img src="static/img/tmin_by_firstyear.png" alt="..."
+                  class="img-thumbnail"> </a>
+              <!-- </div> -->
+            </div>
+            <div class="col-md-6">
+              <!-- <div class="thumbnail"> -->
+              <h4>Daily Maximum Temperature</h4>
+              <a target="_blank" href="static/img/tmax_by_firstyear.png"><img src="static/img/tmax_by_firstyear.png" alt="..."
+                  class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-md-6">
+              <!-- <div class="thumbnail"> -->
+              <h4>Daily Snowfall</h4>
+              <a target="_blank" href="static/img/snow_by_firstyear.png"><img src="static/img/snow_by_firstyear.png" alt="..."
+                  class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
+            <div class="col-md-6">
+              <h4>Daily Snow Depth</h4>
+              <a target="_blank" href="static/img/snwd_by_firstyear.png"><img src="static/img/snwd_by_firstyear.png" alt="..."
+                  class="img-thumbnail"></a>
+            </div>
+
+          </div>
+
+          <p>Note that the plots are not given in the same scales. This was done to
+            show more detail for the different measurements across the continents.
+          </p>
+
+          <p>For each of the measurements, the largest number of stations are in North America.
+
+            We can also see the growth of stations in the
+            archive over time followed by an eventual decline. The timing of the decline
+            varies with the continent. For example, in Asia, there is an abrupt decline in
+            number of precipitation stations in the late 1960s (as discussed in Menne et. al. (2012)). 
+            There is a gradual decline
+            in precipitation stations in the archive for Oceania beginning in the 1970s. In
+            South America there are two sharp declines in the number of daily precipitation stations; 
+            the first, smaller decline occurred in the
+            early 1980s while the larger decline occurred in the late 1990s.</p>
+
+          <p>The following plot gives the above five plots with fixed axes.</p>
+
+          <p> <a target="_blank" href="static/img/test_firstyear.png"><img src="static/img/test_firstyear.png" alt="Element by Continent"
+                class="img-thumbnail" id="visualization"></a>
+          </p>
+
+          <p>
+            <cite>Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012: *An overview
+              of the Global Historical Climatology Network-Daily Database*. Journal of Atmospheric
+              and Oceanic Technology, 29, 897-910, doi:10.1175/JTECH-D-11-00103.1.</cite>
+          </p>
+
+          <!-- </div> -->
+        </div>
+
+        <!--  
             <div class="col-md-4">
                 <h3>Visualizations</h3>
                   <hr class="my-4">
@@ -94,58 +169,81 @@
                     </div>
             </div>
           -->
-  
-          <div class="col-md-4">
-              <!-- <div class="jumbotron"> -->
-                <h3>Visualizations</h3>
-                <hr class="my-4">
-                
-                <div class="row">
-                  <div class="col-md-6 col-sm-3">
-                      <!-- <div class="thumnbail"> -->
-                         <a href="maxtemp.html"> <img src="Resources/assets/images/Fig1.png"
-                          alt="..." class="img-thumbnail"> </a>
-                      <!-- </div> -->
-                  </div>
-                  <div class="col-md-6 col-sm-3">
-                        <!-- <div class="thumbnail"> -->
-                          <a href="humidity.html"><img src="Resources/assets/images/Fig2.png" alt="..." class="img-thumbnail">
-                        <!-- </div> --></a>
-                      </div>
-                
-                  <!-- Force next columns to break to new line at md breakpoint and up -->
-                  <div class="w-100 d-none d-md-block"></div>
-                
-                  <div class="col-md-6 col-sm-3">                      
-                    <!-- <div class="thumbnail"> -->
-                      <a href="cloudiness.html"><img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">
-                    <!-- </div> --></a>
-                  </div>
-                  <div class="col-md-6 col-sm-3">   
-                      <a href="windspeed.html"><img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail"></a>
-                  </div>
-                </div>
-               
-               
+
+        <div class="col-md-4">
+          <!-- <div class="jumbotron"> -->
+          <h3>Visualizations</h3>
+          <hr class="my-4">
+
+          <div class="row">
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumnbail"> -->
+
+              <a href="global-density.html"> <img src="static/img/tmax-2018.png" alt="..." class="img-thumbnail"> </a>
               <!-- </div> -->
             </div>
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumbnail"> -->
 
+              <a href="global-density-prcp.html"><img src="static/img/prcp-2018.png" alt="..." class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
 
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumbnail"> -->
+              <a href="global-addition.html"><img src="static/img/prcp_by_firstyear.png" alt="..."
+                  class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <a href="global-dropout.html"><img src="static/img/prcp_by_lastyear.png" alt="..."
+                  class="img-thumbnail"></a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumnbail"> -->
+              <a href="global-time.html"> <img src="static/img/prcp_by_year.png" alt="..." class="img-thumbnail"> </a>
+              <!-- </div> -->
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumbnail"> -->
+              <a href="global-years.html"><img src="static/img/prcp_years.png" alt="..." class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
 
           </div>
-      </div>
 
-      
+
+          <!-- </div> -->
+        </div>
+
+
+
+
+      </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
+
+  </div>
+
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-  
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+  <script src="../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+
 
 </body>
+
 </html>
