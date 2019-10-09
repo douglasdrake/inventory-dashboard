@@ -1,107 +1,333 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title>Comparisons</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        
-        <link rel="stylesheet" href="style.css">
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Years of Measurements by Continent</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-custom rounded">
+      <a class="navbar-brand" href="index.html">GHCN</a>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
+        aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Global Visualizations</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown09">
+              <a class="dropdown-item" href="global-density.html">Spatial Density - Temperature</a>
+              <a class="dropdown-item" href="global-density-prcp.html">Spatial Density - Precipitation</a>
+              <a class="dropdown-item" href="global-time.html">Evolution of Network over Time</a>
+              <a class="dropdown-item" href="global-addition.html">Station Addition</a>
+              <a class="dropdown-item" href="global-dropout.html">Station Dropout</a>
+              <a class="dropdown-item" href="global-years.html">Years of Data</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="northamerica.html">North America</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sources.html">Sources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="summary-data.html">Data Summaries</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
 
     <div class="container">
-      <nav id="custom" class="navbar navbar-expand-md navbar-custom rounded">
-        <a class="navbar-brand" href="index.html">Latitude</a>
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="row">
+        <div class="col-md-8">
+          <!-- <div class="jumbotron"> -->
+          <h2>Years of Observations</h2>
+          <hr class="my-4">
 
-        <div class="collapse navbar-collapse" id="navbarsExample09">
-          <ul class="navbar-nav ml-auto">
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown09">
-                        <a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
-                        <a class="dropdown-item" href="humidity.html">Humidity</a>
-                        <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-                        <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
-                    </div>
-            </li>
-        
-            <li class="nav-item">
-              <a class="nav-link" href="comparison.html">Comparison</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="sliced.html">Slicing</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="datatable.html">Data</a>
-            </li>
-           
-          </ul>
-        </div>
-      </nav>
-
-      <main role="main">
-        <div class="row">
-          <div class="col">
-            <h3>Comparisons:  Latitude vs X.</h3>
-            <hr>
-            Select any plot to see additional information.
-          </div>
-        </div>
-
-        <div class="container">
-        <div class="row">
+          <div class="row">
             <div class="col-md-6">
-                <!-- <div class="thumnbail"> -->
-                  <h4>vs. Max Temperature</h4>
-                   <a href="maxtemp.html"> <img src="Resources/assets/images/Fig1.png"
-                    alt="..." class="img-thumbnail"> </a>
-                <!-- </div> -->
+                <p>
+                    Violin plots display the distribution of years of data for the stations in the archive.
+                    For example, the first plot gives the distributions of years of data for stations reporting
+                    daily precipition for the different continents.
+                  </p>
+              <!-- <div class="thumnbail"> -->
+              
             </div>
             <div class="col-md-6">
-                  <!-- <div class="thumbnail"> -->
-                    <h4>vs. Humidity</h4>
-                    <a href="humidity.html"><img src="Resources/assets/images/Fig2.png" alt="..." class="img-thumbnail">
-                  <!-- </div> --></a>
-                </div>
-          
+              <!-- <div class="thumbnail"> -->
+                  <h4>Daily Precipitation</h4>
+                  <a target="_blank" href="static/img/prcp_years.png"> <img src="static/img/prcp_years.png"
+                      alt="..." class="img-thumbnail"> </a>
+                  <!-- </div> -->
+
+            </div>
+
             <!-- Force next columns to break to new line at md breakpoint and up -->
             <div class="w-100 d-none d-md-block"></div>
-          
-            <div class="col-md-6">                      
-              <!-- <div class="thumbnail"> -->
-                <h4>vs. Cloudiness</h4>
-                <a href="cloudiness.html"><img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">
-              <!-- </div> --></a>
+
+            <div class="col-md-6">
+              <!-- <div class="thumnbail"> -->
+              <h4>Daily Minimum Temperature</h4>
+              <a target="_blank" href="static/img/tmin_years.png"> <img src="static/img/tmin_years.png"
+                  alt="..." class="img-thumbnail"> </a>
+              <!-- </div> -->
             </div>
-            <div class="col-md-6">  
-                 <h4>vs. Wind Speed</h4> 
-                <a href="windspeed.html"><img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail"></a>
+            <div class="col-md-6">
+              <!-- <div class="thumbnail"> -->
+              <h4>Daily Maximum Temperature</h4>
+              <a target="_blank" href="static/img/tmax_years.png"><img src="static/img/tmax_years.png"
+                  alt="..." class="img-thumbnail">
+                <!-- </div> --></a>
             </div>
 
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-md-6">
+              <!-- <div class="thumbnail"> -->
+              <h4>Daily Snowfall</h4>
+              <a target="_blank" href="static/img/snow_years.png"><img src="static/img/snow_years.png"
+                  alt="..." class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
+            <div class="col-md-6">
+              <h4>Daily Snow Depth</h4>
+              <a target="_blank" href="static/img/snwd_years.png"><img src="static/img/snwd_years.png"
+                  alt="..." class="img-thumbnail"></a>
+            </div>
+
+          </div>
+
+          <p> Note that the sizes of the violin plots do not scale to the number of observations 
+            within each continent.
+          </p>
+
+          <h4>Spread of the Distributions</h4>
+          <p>We see that many of the distributions are skewed to the right.  In the case of precipitation,
+            minimum temperature, and maximum temperature, the third quartile is below 75 years for each of the 
+            continents.  With the exception of Antartica, each of the continents has stations with data spanning
+            more than 100 years of observations.   For daily snowfall, the third quartile falls below 25 years for 
+            each of the continents.  
+          The third quartile for daily snow depth is below 55 years for all continents.</p>
+            
+            <p>For precipitation, there is a station in Europe with 239 years
+            of data, in North America there is a station with 180 years of data and in Oceania there is a station
+            with 181 years of data.  For minimum and maximum daily temperature, there is a station in Europe with 246
+            years of data; in North America there is a station with 164 years of data, and in Oceania there is a 
+            station with 161 years of data.  For daily snowfall, there is station in North America with 178 years of
+            observations.  Finally, for daily snow depth, there is a station in North America with 163 years of 
+            data and a station in Europe with 157 years of data.
+          </p>
+
+          <h4>Central Locations of the Distributions</h4>
+          <p>Summary statistics for the years of data distribution are given in <a href="summary-data.html">Data Summaries</a>.
+            This includes measures of the median number of years of observations and the average number of years of observations.
+            We see that the median number years of observations tends to be smaller in North America with some minor exceptions.
+            This is due to the recent, rapid growth of the number of stations in North America included in the GHCN Archive.
+            
+            <p> The table below gives the median number of years for each type of observation by continent.
+
+            <div class="table-responsive">
+                <table class="table table-sm table-striped">
+                  <caption>Median Years of Observations</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Element</th>
+                      <th scope="col" style="text-align:center">Africa</th>
+                      <th scope="col" style="text-align:center">Antartica</th>
+                      <th scope="col" style="text-align:center">Asia</th>
+                      <th scope="col" style="text-align:center">Europe</th>
+                      <th scope="col" style="text-align:center">North America</th>
+                      <th scope="col" style="text-align:center">Oceania</th>
+                      <th scope="col" style="text-align:center">South America</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">PRCP</th>
+                      <td align="right">67</td>
+                      <td align="right">26</td>
+                      <td align="right">56</td>
+                      <td align="right">50</td>
+                      <td align="right">10</td>
+                      <td align="right">37</td>
+                      <td align="right">26</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">TMAX</th>
+                      <td align="right">46</td>
+                      <td align="right">33</td>
+                      <td align="right">55</td>
+                      <td align="right">47</td>
+                      <td align="right">25</td>
+                      <td align="right">24</td>
+                      <td align="right">39</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">TMIN</th>
+                      <td align="right">47</td>
+                      <td align="right">32</td>
+                      <td align="right">56</td>
+                      <td align="right">47</td>
+                      <td align="right">26</td>
+                      <td align="right">24</td>
+                      <td align="right">41</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">SNOW</th>
+                      <td align="right">13</td>
+                      <td align="right">5</td>
+                      <td align="right">3</td>
+                      <td align="right">9</td>
+                      <td align="right">8</td>
+                      <td align="right">12</td>
+                      <td align="right">2</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">SNWD</th>
+                      <td align="right">1</td>
+                      <td align="right">8</td>
+                      <td align="right">19</td>
+                      <td align="right">44</td>
+                      <td align="right">8</td>
+                      <td align="right">12</td>
+                      <td align="right">16</td>
+                    </tr>
+                </table>
+              </div>
+              </p>
+
+          
+          </p>
+          <p>
+            <cite>Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012: *An overview
+              of the Global Historical Climatology Network-Daily Database*. Journal of Atmospheric
+              and Oceanic Technology, 29, 897-910, doi:10.1175/JTECH-D-11-00103.1.</cite>
+          </p>
+
+          <!-- </div> -->
         </div>
+
+        <!--  
+            <div class="col-md-4">
+                <h3>Visualizations</h3>
+                  <hr class="my-4">
+                    <div class="col-md-6">
+                      <img src="Resources/assets/images/Fig1.png" alt="..." class="img-thumbnail">
+                      <img src="Resources/assets/images/Fig2.png" alt="..." class="img-thumbnail">
+                    </div>
+                    <div class="col-md-6">                      
+                      <img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">                   
+                      <img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail">
+                  </div>
+                    <div class="w-100 d-none d-md-block"></div>
+                  
+                    <div class="col-md-6">                      
+                        <img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">                   
+                        <img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail">
+                    </div>
+            </div>
+          -->
+
+        <div class="col-md-4">
+          <!-- <div class="jumbotron"> -->
+          <h3>Visualizations</h3>
+          <hr class="my-4">
+
+          <div class="row">
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumnbail"> -->
+
+              <a href="global-density.html"> <img src="static/img/tmax-2018.png" alt="..." class="img-thumbnail"> </a>
+              <!-- </div> -->
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumbnail"> -->
+
+              <a href="global-density-prcp.html"><img src="static/img/prcp-2018.png" alt="..." class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumbnail"> -->
+              <a href="global-addition.html"><img src="static/img/prcp_by_firstyear.png" alt="..."
+                  class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <a href="global-dropout.html"><img src="static/img/prcp_by_lastyear.png" alt="..."
+                  class="img-thumbnail"></a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumnbail"> -->
+              <a href="global-time.html"> <img src="static/img/prcp_by_year.png" alt="..." class="img-thumbnail"> </a>
+              <!-- </div> -->
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <!-- <div class="thumbnail"> -->
+              <a href="global-years.html"><img src="static/img/prcp_years.png" alt="..." class="img-thumbnail">
+                <!-- </div> --></a>
+            </div>
+
+          </div>
+
+
+          <!-- </div> -->
+        </div>
+
+
+
+
       </div>
-      </main>
     </div>
 
-    <!-- Bootstrap core JavaScript
+
+  </div>
+
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-  
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+  <script src="../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+
 
 </body>
+
 </html>

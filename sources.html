@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sources</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-custom rounded">
+      <a class="navbar-brand" href="index.html">GHCN</a>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
+        aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Global Visualizations</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown09">
+              <a class="dropdown-item" href="global-density.html">Spatial Density - Temperature</a>
+              <a class="dropdown-item" href="global-density-prcp.html">Spatial Density - Precipitation</a>
+              <a class="dropdown-item" href="global-time.html">Evolution of Network over Time</a>
+              <a class="dropdown-item" href="global-addition.html">Station Addition</a>
+              <a class="dropdown-item" href="global-dropout.html">Station Dropout</a>
+              <a class="dropdown-item" href="global-years.html">Years of Data</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="northamerica.html">North America</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sources.html">Sources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="summary-data.html">Data Summaries</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- <div class="jumbotron"> -->
+            <h2>Sources: GHCN Network of Stations</h2>
+            <hr class="my-4">
+
+            <h4>Data Source</h4>
+            <p> The primary source for the data used in this project is
+              <a
+                href="https://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets/global-historical-climatology-network-ghcn">
+                The Global Historical Climatology Network</a>.
+            </p>
+
+            <h4>References</h4>
+            <p>
+              The following citations list the paper describing the GHCN and the version of the GHCN Daily used
+              for the project:</p>
+            <p>
+              <cite>Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012: *An overview
+                of the Global Historical Climatology Network-Daily Database*. Journal of Atmospheric
+                and Oceanic Technology, 29, 897-910, doi:10.1175/JTECH-D-11-00103.1.</cite>
+            </p>
+
+            <p>
+              <cite>
+                Menne, M.J., I. Durre, B. Korzeniewski, S. McNeal, K. Thomas, X. Yin, S. Anthony, R. Ray,
+                R.S. Vose, B.E.Gleason, and T.G. Houston, 2012: *Global Historical Climatology Network -
+                Daily (GHCN-Daily)*, Version 3.27.
+              </cite></p>
+
+            <h4>Repository</h4>
+            <p>
+              The <a href="https://github.com/douglasdrake/inventory-dashboard">GitHub Repository</a> for this
+              project includes the Jupyter notebooks used to clean the data and produce the plots.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+  <script src="../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
