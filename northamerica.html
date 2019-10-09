@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-  <title>Years of Measurements by Continent</title>
+  <title>North America</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -65,15 +65,12 @@
       <div class="row">
         <div class="col-md-8">
           <!-- <div class="jumbotron"> -->
-          <h2>Years of Observations</h2>
+          <h2>Type of Stations in North America</h2>
           <hr class="my-4">
 
           <div class="row">
             <div class="col-md-6">
                 <p>
-                    Violin plots display the distribution of years of data for the stations in the archive.
-                    For example, the first plot gives the distributions of years of data for stations reporting
-                    daily precipition for the different continents.
                   </p>
               <!-- <div class="thumnbail"> -->
               
@@ -81,7 +78,7 @@
             <div class="col-md-6">
               <!-- <div class="thumbnail"> -->
                   <h4>Daily Precipitation</h4>
-                  <a target="_blank" href="static/img/prcp_years.png"> <img src="static/img/prcp_years.png"
+                  <a target="_blank" href="static/img/type_prcp_by_year.png"> <img src="static/img/type_prcp_by_year.png"
                       alt="..." class="img-thumbnail"> </a>
                   <!-- </div> -->
 
@@ -93,14 +90,14 @@
             <div class="col-md-6">
               <!-- <div class="thumnbail"> -->
               <h4>Daily Minimum Temperature</h4>
-              <a target="_blank" href="static/img/tmin_years.png"> <img src="static/img/tmin_years.png"
+              <a target="_blank" href="static/img/type_tmin_by_year.png"> <img src="static/img/type_tmin_by_year.png"
                   alt="..." class="img-thumbnail"> </a>
               <!-- </div> -->
             </div>
             <div class="col-md-6">
               <!-- <div class="thumbnail"> -->
               <h4>Daily Maximum Temperature</h4>
-              <a target="_blank" href="static/img/tmax_years.png"><img src="static/img/tmax_years.png"
+              <a target="_blank" href="static/img/type_tmax_by_year.png"><img src="static/img/type_tmax_by_year.png"
                   alt="..." class="img-thumbnail">
                 <!-- </div> --></a>
             </div>
@@ -111,116 +108,27 @@
             <div class="col-md-6">
               <!-- <div class="thumbnail"> -->
               <h4>Daily Snowfall</h4>
-              <a target="_blank" href="static/img/snow_years.png"><img src="static/img/snow_years.png"
+              <a target="_blank" href="static/img/type_snow_by_year.png"><img src="static/img/type_snow_by_year.png"
                   alt="..." class="img-thumbnail">
                 <!-- </div> --></a>
             </div>
             <div class="col-md-6">
               <h4>Daily Snow Depth</h4>
-              <a target="_blank" href="static/img/snwd_years.png"><img src="static/img/snwd_years.png"
+              <a target="_blank" href="static/img/type_snwd_by_year.png"><img src="static/img/type_snwd_by_year.png"
                   alt="..." class="img-thumbnail"></a>
             </div>
 
           </div>
 
-          <p> Note that the sizes of the violin plots do not scale to the number of observations 
-            within each continent.
+          <p>
           </p>
 
-          <h4>Spread of the Distributions</h4>
-          <p>We see that many of the distributions are skewed to the right.  In the case of precipitation,
-            minimum temperature, and maximum temperature, the third quartile is below 75 years for each of the 
-            continents.  With the exception of Antartica, each of the continents has stations with data spanning
-            more than 100 years of observations.   For daily snowfall, the third quartile falls below 25 years for 
-            each of the continents.  
-          The third quartile for daily snow depth is below 55 years for all continents.</p>
-            
-            <p>For precipitation, there is a station in Europe with 239 years
-            of data, in North America there is a station with 180 years of data and in Oceania there is a station
-            with 181 years of data.  For minimum and maximum daily temperature, there is a station in Europe with 246
-            years of data; in North America there is a station with 164 years of data, and in Oceania there is a 
-            station with 161 years of data.  For daily snowfall, there is station in North America with 178 years of
-            observations.  Finally, for daily snow depth, there is a station in North America with 163 years of 
-            data and a station in Europe with 157 years of data.
-          </p>
-
-          <h4>Central Locations of the Distributions</h4>
-          <p>Summary statistics for the years of data distribution are given in <a href="summary-data.html">Data Summaries</a>.
-            This includes measures of the median number of years of observations and the average number of years of observations.
-            We see that the median number years of observations tends to be smaller in North America with some minor exceptions.
-            This is due to the recent, rapid growth of the number of stations in North America included in the GHCN Archive.
-            
-            <p> The table below gives the median number of years for each type of observation by continent.
-
-            <div class="table-responsive">
-                <table class="table table-sm table-striped">
-                  <caption>Median Years of Observations</caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Element</th>
-                      <th scope="col" style="text-align:center">Africa</th>
-                      <th scope="col" style="text-align:center">Antartica</th>
-                      <th scope="col" style="text-align:center">Asia</th>
-                      <th scope="col" style="text-align:center">Europe</th>
-                      <th scope="col" style="text-align:center">North America</th>
-                      <th scope="col" style="text-align:center">Oceania</th>
-                      <th scope="col" style="text-align:center">South America</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">PRCP</th>
-                      <td align="right">67</td>
-                      <td align="right">26</td>
-                      <td align="right">56</td>
-                      <td align="right">50</td>
-                      <td align="right">10</td>
-                      <td align="right">37</td>
-                      <td align="right">26</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">TMAX</th>
-                      <td align="right">46</td>
-                      <td align="right">33</td>
-                      <td align="right">55</td>
-                      <td align="right">47</td>
-                      <td align="right">25</td>
-                      <td align="right">24</td>
-                      <td align="right">39</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">TMIN</th>
-                      <td align="right">47</td>
-                      <td align="right">32</td>
-                      <td align="right">56</td>
-                      <td align="right">47</td>
-                      <td align="right">26</td>
-                      <td align="right">24</td>
-                      <td align="right">41</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">SNOW</th>
-                      <td align="right">13</td>
-                      <td align="right">5</td>
-                      <td align="right">3</td>
-                      <td align="right">9</td>
-                      <td align="right">8</td>
-                      <td align="right">12</td>
-                      <td align="right">2</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">SNWD</th>
-                      <td align="right">1</td>
-                      <td align="right">8</td>
-                      <td align="right">19</td>
-                      <td align="right">44</td>
-                      <td align="right">8</td>
-                      <td align="right">12</td>
-                      <td align="right">16</td>
-                    </tr>
-                </table>
-              </div>
-              </p>
+          
+          <p>The following plot gives the number of stations by type and country for </p>
+  
+            <p> <a target="_blank" href="static/img/type-bars.png"><img src="static/img/type-bars.png" alt="Element Type by Country"
+                  class="img-thumbnail" id="visualization"></a>
+            </p>
 
           
           </p>
@@ -233,26 +141,6 @@
           <!-- </div> -->
         </div>
 
-        <!--  
-            <div class="col-md-4">
-                <h3>Visualizations</h3>
-                  <hr class="my-4">
-                    <div class="col-md-6">
-                      <img src="Resources/assets/images/Fig1.png" alt="..." class="img-thumbnail">
-                      <img src="Resources/assets/images/Fig2.png" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-6">                      
-                      <img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">                   
-                      <img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail">
-                  </div>
-                    <div class="w-100 d-none d-md-block"></div>
-                  
-                    <div class="col-md-6">                      
-                        <img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">                   
-                        <img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail">
-                    </div>
-            </div>
-          -->
 
         <div class="col-md-4">
           <!-- <div class="jumbotron"> -->
