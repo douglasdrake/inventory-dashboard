@@ -13,12 +13,17 @@ The analysis conditions on the type of measurements available and the continents
 North America, the analysis also considers the type of station.
 
 # Methods
-1.  Python was used to download the source files and setup the local directory structure.
+1.  Python was used to download the source files and setup the local directory structure:
+    [inventory.ipynb](https://nbviewer.jupyter.org/github/douglasdrake/inventory-dashboard/blob/master/inventory.ipynb).
 2.  Pandas was used to clean the data, merge data frames and produce summary statistics for the station data.
-3.  Cartopy, matplotlib, and seaborn were used to produce plots.
-2.  HTML.  The layout of each page of the dashboard is done with [Bootstrap](https://getbootstrap.com/).  Navigational bars, drop-down menus, and tables all use Bootstrap components.
-3.  CSS.  Images and component characteristics are modified with a CSS style sheet.
-4.  The dashboard uses responsive web design to adjust the layout and image sizes based on the user's device.
+3.  Cartopy, matplotlib, and seaborn were used to produce plots: 
+    [density.ipynb](https://nbviewer.jupyter.org/github/douglasdrake/inventory-dashboard/blob/master/density.ipynb) and
+    [northamerica.ipynb](https://nbviewer.jupyter.org/github/douglasdrake/inventory-dashboard/blob/master/northamerica.ipynb)
+4.  An analysis of the distribution of nearest neighbor distances between stations was performed:
+    [nearest-neighbor-distance.ipynb](https://nbviewer.jupyter.org/github/douglasdrake/inventory-dashboard/blob/master/nearest-neighbor-distance.ipynb)
+4.  HTML.  The layout of each page of the dashboard is done with [Bootstrap](https://getbootstrap.com/).  Navigational bars, drop-down menus, and tables all use Bootstrap components.
+5.  CSS.  Images and component characteristics are modified with a CSS style sheet.
+6.  The dashboard uses responsive web design to adjust the layout and image sizes based on the user's device.
 
 The [dashboard](https://douglasdrake.github.io/inventory-dashboard/).
 
