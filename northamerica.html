@@ -68,19 +68,79 @@
           <h2>Type of Stations in North America</h2>
           <hr class="my-4">
 
+          <p>
+            The following plots give the number of stations reporting the different types of
+            observations in a given year in North America. This is measuring the number of stations
+            active in a given year and indicates how the size of the archive is changing over time.
+          </p>
+
+
+
           <div class="row">
             <div class="col-md-6">
-                <p>
-                  </p>
+              <p>
+
+                <div class="table-responsive">
+                  <table class="table table-sm table-striped">
+                    <caption>Station Types</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Code</th>
+                        <th scope="col" style="text-align:center">Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">0</th>
+                        <td>Unspecified</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Community Collaborative Rain, Hail,and Snow (CoCoRaHS)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C</th>
+                        <td>U.S. Cooperative Network</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">E</th>
+                        <td>ECA&D non-blended
+                          dataset</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">M</th>
+                        <td>World Meteorological Organization</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">N</th>
+                        <td>Data supplied by a
+                          National Meteorological or Hydrological Center</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R</th>
+                        <td>U.S. Interagency Remote Automatic Weather Station (RAWS)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">S</th>
+                        <td>U.S. Natural Resources Conservation Service SNOwpack
+                          TELemtry (SNOTEL)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">W</th>
+                        <td>WBAN</td>
+                      </tr>
+                  </table>
+                </div>
+              </p>
               <!-- <div class="thumnbail"> -->
-              
+
             </div>
             <div class="col-md-6">
               <!-- <div class="thumbnail"> -->
-                  <h4>Daily Precipitation</h4>
-                  <a target="_blank" href="static/img/type_prcp_by_year.png"> <img src="static/img/type_prcp_by_year.png"
-                      alt="..." class="img-thumbnail"> </a>
-                  <!-- </div> -->
+              <h4>Daily Precipitation</h4>
+              <a target="_blank" href="static/img/type_prcp_by_year.png"> <img src="static/img/type_prcp_by_year.png"
+                  alt="..." class="img-thumbnail"> </a>
+              <!-- </div> -->
 
             </div>
 
@@ -121,19 +181,23 @@
           </div>
 
           <p>
-            
-          </p>
-
-          
-          <p>The following bar plot gives the number of stations by type and country for the Canada, Mexico, and the United States.
 
           </p>
-  
-            <p> <a target="_blank" href="static/img/type-bars.png"><img src="static/img/type-bars.png" alt="Element Type by Country"
-                  class="img-thumbnail" id="visualization"></a>
-            </p>
 
-          
+
+          <p>The following bar plot gives the number of stations by type and country for Canada, Mexico, and the United
+            States.
+            The vertical axis uses logarithmic scaling to allow us to see detail in the plot. 99.6% of all stations in
+            North America are
+            in these three countries; 81% of the stations are in the United States, 11.5% are in Canada and 6.9% are in
+            Mexico.
+          </p>
+
+          <p> <a target="_blank" href="static/img/type-bars.png"><img src="static/img/type-bars.png"
+                alt="Element Type by Country" class="img-thumbnail" id="visualization"></a>
+          </p>
+
+
           </p>
           <p>
             <cite>Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012: *An overview
