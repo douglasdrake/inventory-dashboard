@@ -16,9 +16,11 @@ North America, the analysis also considers the type of station.
 1.  Python was used to download the source files and setup the local directory structure:
     [inventory.ipynb](https://nbviewer.jupyter.org/github/douglasdrake/inventory-dashboard/blob/master/inventory.ipynb).
 2.  Pandas was used to clean the data, merge data frames and produce summary statistics for the station data.
-3.  Cartopy, matplotlib, and seaborn were used to produce plots: 
+3.  CartoPy, Geoplot, matplotlib, and seaborn were used to produce plots: 
     [density.ipynb](https://nbviewer.jupyter.org/github/douglasdrake/inventory-dashboard/blob/master/density.ipynb) and
     [northamerica.ipynb](https://nbviewer.jupyter.org/github/douglasdrake/inventory-dashboard/blob/master/northamerica.ipynb).
+    The density plots use a function I had written before that outputs a GeoJSON.  To use Geoplot, the GeoJSON is converted to a GeoPandas
+    GeoDataFrame of Shapely objects.
 4.  An analysis of the distribution of nearest neighbor distances between stations was performed:
     [nearest-neighbor-distance.ipynb](https://nbviewer.jupyter.org/github/douglasdrake/inventory-dashboard/blob/master/nearest-neighbor-distance.ipynb)
 4.  HTML.  The layout of each page of the dashboard is done with [Bootstrap](https://getbootstrap.com/).  Navigational bars, drop-down menus, and tables all use Bootstrap components.
