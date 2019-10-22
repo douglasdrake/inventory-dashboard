@@ -65,9 +65,10 @@
       <div class="row">
         <div class="col-md-8">
           <!-- <div class="jumbotron"> -->
-          <h2>Type of Stations in North America</h2>
+          <h2>Stations in North America</h2>
           <hr class="my-4">
 
+          <h3>Number of Active Stations Per Year</h3>
           <p>
             The following plots give the number of stations reporting the different types of
             observations in a given year in North America. This is measuring the number of stations
@@ -91,43 +92,65 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">0</th>
+                        <th scope="row">
+                          <font color="orange">0</font>
+                        </th>
                         <td>Unspecified</td>
                       </tr>
                       <tr>
-                        <th scope="row">1</th>
-                        <td><a target="_blank" href="https://www.cocorahs.org/">Community Collaborative Rain, Hail,and Snow (CoCoRaHS)</a></td>
+                        <th scope="row">
+                          <font color="red">1</font>
+                        </th>
+                        <td><a target="_blank" href="https://www.cocorahs.org/">Community Collaborative Rain, Hail,and
+                            Snow (CoCoRaHS)</a></td>
                       </tr>
                       <tr>
-                        <th scope="row">C</th>
+                        <th scope="row">
+                          <font color="black">C</font>
+                        </th>
                         <td><a target="_blank" href="https://www.weather.gov/rah/coop">U.S. Cooperative Network</a></td>
                       </tr>
                       <tr>
-                        <th scope="row">E</th>
+                        <th scope="row">
+                          <font color="purple">E</font>
+                        </th>
                         <td><a target="_blank" href="https://www.ecad.eu/">ECA&D non-blended
-                          dataset</a></td>
+                            dataset</a></td>
                       </tr>
                       <tr>
-                        <th scope="row">M</th>
-                        <td><a target="_blank" href="https://public.wmo.int/en">World Meteorological Organization</a></td>
+                        <th scope="row">
+                          <font color="green">M</font>
+                        </th>
+                        <td><a target="_blank" href="https://public.wmo.int/en">World Meteorological Organization</a>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">N</th>
+                        <th scope="row">
+                          <font color="brown">N</font>
+                        </th>
                         <td>Data supplied by a
                           National Meteorological or Hydrological Center</td>
                       </tr>
                       <tr>
-                        <th scope="row">R</th>
-                        <td><a target="_blank" href="https://raws.nifc.gov/">U.S. Interagency Remote Automatic Weather Station (RAWS)</a></td>
+                        <th scope="row">
+                          <font color="yellow">R</font>
+                        </th>
+                        <td><a target="_blank" href="https://raws.nifc.gov/">U.S. Interagency Remote Automatic Weather
+                            Station (RAWS)</a></td>
                       </tr>
                       <tr>
-                        <th scope="row">S</th>
+                        <th scope="row">
+                          <font color="magenta">S</font>
+                        </th>
                         <td><a target="_blank" href="https://www.wcc.nrcs.usda.gov/about/mon_automate.html">
-                          U.S. Natural Resources Conservation Service SNOwpack TELemtry (SNOTEL)</a></td>
+                            U.S. Natural Resources Conservation Service SNOwpack TELemtry (SNOTEL)</a></td>
                       </tr>
                       <tr>
-                        <th scope="row">W</th>
-                        <td><a target="_blank" href="https://catalog.data.gov/dataset/historical-wban-id-assignments">WBAN</a></td>
+                        <th scope="row">
+                          <font color="blue">W</font>
+                        </th>
+                        <td><a target="_blank"
+                            href="https://catalog.data.gov/dataset/historical-wban-id-assignments">WBAN</a></td>
                       </tr>
                   </table>
                 </div>
@@ -181,10 +204,130 @@
           </div>
 
           <p>
+            We see a similar pattern for nearly all types of station IDs in North America: for each meteorological
+            element,
+            the number of active station IDs in a given year increases to a peak and then begins to decline. The rate of
+            growth
+            to the peak and the rate of decline varies by type of station and by type of element.
+          </p>
+          <p>
+            For example, for stations reporting daily precipitation, the number of active stations in the US Cooperative
+            Network peaks
+            in 1951 at 10,999 stations and then declines to 6219 stations in 2019.
+            The CoCoRaHS network of station IDs explodes after 2000 to a peak of 19,798 stations in 2017 and then
+            declines to 18,134 stations in 2019.
+            The National Hydrological station IDs first appear in the archive in 1902, peak in 1983 at 4093 stations and
+            then decline to zero in 2015.
+          </p>
 
+          <p>
+            The following table gives the earliest and lastest years for each type of station ID in the archive in addition to 
+            the year with the largest number of station IDs that record daily precipitation.  Note that none of the stations of 
+            type R record daily precipitation.
+            <div class="table-responsive">
+              <table class="table table-sm table-striped">
+                <caption>First, Peak, and Last Years of Record by Type</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col" style="text-align:center">First Year</th>
+                    <th scope="col" style="text-align:center">Peak Year</th>
+                    <th scope="col" style="text-align:center">Peak Value</th>
+                    <th scope="col" style="text-align:center">Last Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <font color="orange">0</font>
+                    </th>
+                    <td style="text-align:center">1840</td>
+                    <td style="text-align:center">1974</td>
+                    <td style="text-align:right">2998</td>
+                    <td style="text-align:center">2019</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <font color="red">1</font>
+                    </th>
+                    <td style="text-align:center">1998</td>
+                    <td style="text-align:center">2017</td>
+                    <td style="text-align:right">19798</td>
+                    <td style="text-align:center">2019</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <font color="black">C</font>
+                    </th>
+                    <td style="text-align:center">1840</td>
+                    <td style="text-align:center">1951</td>
+                    <td style="text-align:right">10999</td>
+                    <td style="text-align:center">2019</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <font color="purple">E</font>
+                    </th>
+                    <td style="text-align:center">1873</td>
+                    <td style="text-align:center">1966</td>
+                    <td style="text-align:right">30</td>
+                    <td style="text-align:center">2018</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <font color="green">M</font>
+                    </th>
+                    <td style="text-align:center">1938</td>
+                    <td style="text-align:center">1996</td>
+                    <td style="text-align:right">103</td>
+                    <td style="text-align:center">2019</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <font color="brown">N</font>
+                    </th>
+                    <td style="text-align:center">1902</td>
+                    <td style="text-align:center">1983</td>
+                    <td style="text-align:right">4093</td>
+                    <td style="text-align:center">2014</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <font color="pink">P</font>
+                    </th>
+                    <td style="text-align:center">1856</td>
+                    <td style="text-align:center">1863</td>
+                    <td style="text-align:right">2</td>
+                    <td style="text-align:center">1892</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <font color="magenta">S</font>
+                    </th>
+                    <td style="text-align:center">1978</td>
+                    <td style="text-align:center">2014</td>
+                    <td style="text-align:right">853</td>
+                    <td style="text-align:center">2019</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <font color="blue">W</font>
+                    </th>
+                    <td style="text-align:center">1836</td>
+                    <td style="text-align:center">2012</td>
+                    <td style="text-align:right">1254</td>
+                    <td style="text-align:center">2019</td>
+
+                  </tr>
+              </table>
+            </div>
           </p>
 
 
+          <h3>Types of Stations in The Three Most Active Countries</h3>
           <p>The following bar plot gives the number of stations by type and country for Canada, Mexico, and the United
             States.
             The vertical axis uses logarithmic scaling to allow us to see detail in the plot. 99.6% of all stations in
@@ -197,6 +340,15 @@
                 alt="Element Type by Country" class="img-thumbnail" id="visualization"></a>
           </p>
 
+          <p>
+            Within these three countries, stations of type <font color="green">M</font> and <font color="brown">N</font>
+            are only
+            found in Mexico. In addition, these are the only station types in Mexico. 7901 of the 7902 unspcecified type
+            <font color="orange">0</font>
+            station IDs in North America are found in Canada and 1 is in the United States. The United States has the
+            most varied types of
+            stations.
+          </p>
 
           </p>
           <p>
